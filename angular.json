@@ -10,7 +10,9 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "sass",
+          "changeDetection": "OnPush",
+          "viewEncapsulation": "None"
         }
       },
       "architect": {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'compnent-tree';
+  sample: Product;
+
+  constructor() {
+    this.sample = { stocked: true, name: 'test', price: 30 };
+  }
 }
