@@ -1,3 +1,7 @@
 <div class="product__table__container">
-  <product-category-row [category]="category" *ngFor="let category of categories"></product-category-row>
+  <product-category-row
+    [stock-only]="isStockOnly"
+    [category]="category"
+    *ngFor="let category of categories">
+  </product-category-row>
 </div>

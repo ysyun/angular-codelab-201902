@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'search-bar',
@@ -9,9 +9,16 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
 })
 export class SearchBarComponent implements OnInit {
 
+  @Output()stockChange: EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  onChangeStock(e: any) {
+    this.stockChange.emit(e.target.checked);
+  }
+
 
 }

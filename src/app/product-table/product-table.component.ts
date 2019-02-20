@@ -12,6 +12,9 @@ export class ProductTableComponent implements OnInit {
 
   @Input()
   categories: Category[];
+  // tslint:disable-next-line:no-input-rename
+  @Input('stock-only')
+  isStockOnly: boolean;
 
   constructor() { }
 
