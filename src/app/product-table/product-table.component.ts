@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Category } from '../category.model';
 
 @Component({
   selector: 'product-table',
@@ -8,6 +9,9 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductTableComponent implements OnInit {
+
+  @Input()
+  categories: Category[];
 
   constructor() { }
 
