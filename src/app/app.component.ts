@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from './product.model';
+import { Category } from './category.model';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,14 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  sample: Product;
+  sample: Category;
 
   constructor() {
-    this.sample = { stocked: true, name: 'test', price: 30 };
+    this.sample = {
+      name: 'test',
+      products: [
+        { stocked: true, name: 'test', price: 30 },
+      ]
+    };
   }
 }
